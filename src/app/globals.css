@@ -38,6 +38,7 @@ html {
   font-kerning: normal;
   font-feature-settings: "liga", "kern";
   scroll-behavior: smooth;
+  scroll-padding-top: calc(70 * var(--u));
 }
 
 body {
@@ -198,6 +199,10 @@ button {
   text-align: left;
   background-color: var(--sand);
   color: var(--ink);
+  transition: background-color 200ms ease, color 200ms ease;
+}
+.site-accordion-trigger:hover {
+  background-color: #E2D5CA;
 }
 
 .site-accordion-title {
@@ -244,15 +249,39 @@ button {
   background-color: var(--ink);
 }
 
+/* Form Inputs UX & Accessibility */
+.form-input {
+  transition: border-color 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+.form-input:focus {
+  border-color: var(--ink) !important;
+  background-color: #FFFFFF !important;
+  box-shadow: 0 0 0 1px var(--ink);
+}
+
+/* Global Focus Visible */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
 /* Responsive adjustments for mobile < 1024px */
 @media (max-width: 1023px) {
   :root {
     --u: 1;
   }
 
+  html {
+    scroll-padding-top: 65px;
+  }
+
   .site-button {
     font-size: 11px;
-    height: 40px;
+    height: 42px;
     padding: 0 20px;
   }
 
@@ -271,10 +300,19 @@ button {
 
   .site-accordion-body {
     padding: 10px 16px 16px;
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .nav-link {
     font-size: 12px;
+  }
+
+  .form-input {
+    height: 44px !important;
+    font-size: 14px !important;
+  }
+
+  textarea.form-input {
+    height: 100px !important;
   }
 }

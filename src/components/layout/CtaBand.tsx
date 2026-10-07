@@ -88,6 +88,10 @@ export default function CtaBand({ variant = 'about' }: CtaBandProps) {
               gap: 28px !important;
               align-items: flex-start !important;
             }
+            .cta-container-contact :global(.site-button) {
+              width: 100% !important;
+              max-width: 320px !important;
+            }
           }
         `}</style>
       </section>
@@ -222,6 +226,10 @@ export default function CtaBand({ variant = 'about' }: CtaBandProps) {
               gap: 28px !important;
               align-items: flex-start !important;
             }
+            .cta-container-classes :global(.site-button) {
+              width: 100% !important;
+              max-width: 320px !important;
+            }
           }
         `}</style>
       </section>
@@ -343,6 +351,10 @@ export default function CtaBand({ variant = 'about' }: CtaBandProps) {
             flex-direction: column !important;
             gap: 28px !important;
             align-items: flex-start !important;
+          }
+          .cta-container-about :global(.site-button) {
+            width: 100% !important;
+            max-width: 320px !important;
           }
         }
       `}</style>

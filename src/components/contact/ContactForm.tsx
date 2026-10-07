@@ -104,6 +104,7 @@ export default function ContactForm() {
         <input
           type="text"
           required
+          aria-label="Full Name"
           placeholder={formCopy.fields.name}
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -124,6 +125,7 @@ export default function ContactForm() {
         <input
           type="email"
           required
+          aria-label="Email Address"
           placeholder={formCopy.fields.email}
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -144,6 +146,7 @@ export default function ContactForm() {
         <input
           type="tel"
           required
+          aria-label="Phone Number"
           placeholder={formCopy.fields.phone}
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -164,6 +167,7 @@ export default function ContactForm() {
         <div style={{ position: 'relative' }}>
           <select
             value={formData.interest}
+            aria-label="Service or Interest"
             onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
             className="form-input"
             style={{
@@ -204,6 +208,7 @@ export default function ContactForm() {
         <textarea
           required
           rows={3}
+          aria-label="Your Message"
           placeholder={formCopy.fields.message}
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}

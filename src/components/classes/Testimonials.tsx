@@ -101,8 +101,8 @@ export default function Testimonials() {
                     style={{
                       fontFamily: 'var(--font-cormorant)',
                       fontStyle: 'italic',
-                      fontSize: 'calc(11 * var(--u))',
-                      lineHeight: 1.4,
+                      fontSize: 'calc(13 * var(--u))',
+                      lineHeight: 1.45,
                       color: 'var(--text)',
                       marginBottom: 'calc(6 * var(--u))',
                     }}

@@ -80,6 +80,7 @@ export default function Footer({ className = '' }: FooterProps) {
 
         {/* Vertical Divider */}
         <div
+          className="footer-divider"
           style={{
             width: '1px',
             height: 'calc(44 * var(--u))',
@@ -98,30 +99,30 @@ export default function Footer({ className = '' }: FooterProps) {
         >
           {/* Social Icons 14px */}
           <div style={{ display: 'flex', gap: 'calc(12 * var(--u))', color: 'var(--ink)' }}>
-            <a href={SITE.socials.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a href={SITE.socials.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ transition: 'opacity 0.2s', color: 'inherit' }}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                 <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
               </svg>
             </a>
-            <a href={SITE.socials.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <a href={SITE.socials.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" style={{ transition: 'opacity 0.2s', color: 'inherit' }}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
               </svg>
             </a>
-            <a href={SITE.socials.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <a href={SITE.socials.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok" style={{ transition: 'opacity 0.2s', color: 'inherit' }}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
               </svg>
             </a>
-            <a href={SITE.socials.pinterest} target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+            <a href={SITE.socials.pinterest} target="_blank" rel="noopener noreferrer" aria-label="Pinterest" style={{ transition: 'opacity 0.2s', color: 'inherit' }}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <line x1="12" y1="8" x2="12" y2="16" />
                 <circle cx="12" cy="12" r="10" />
               </svg>
             </a>
-            <a href={SITE.socials.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <a href={SITE.socials.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" style={{ transition: 'opacity 0.2s', color: 'inherit' }}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
                 <polygon points="10 15 15 12 10 9" />
@@ -155,6 +156,10 @@ export default function Footer({ className = '' }: FooterProps) {
             flex-direction: column !important;
             gap: 20px !important;
             align-items: flex-start !important;
+            padding-inline: 0 !important;
+          }
+          .footer-divider {
+            display: none !important;
           }
         }
       `}</style>

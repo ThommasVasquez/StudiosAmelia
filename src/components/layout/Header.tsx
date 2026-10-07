@@ -20,6 +20,25 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMobileMenuOpen(false);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   const isClassesPage = pathname?.includes('/classes');
   const ctaText = isClassesPage ? COPY.header.ctaClasses : COPY.header.ctaDefault;
   const bookingLink = isClassesPage ? getBookingUrl('classes') : getBookingUrl();
@@ -42,10 +61,12 @@ export default function Header() {
           left: 0,
           width: '100%',
           height: 'calc(62 * var(--u))',
-          backgroundColor: 'var(--bg)',
+          backgroundColor: 'rgba(246, 241, 238, 0.94)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
           zIndex: 1000,
           borderBottom: hasScrolled ? '1px solid var(--hairline)' : '1px solid transparent',
-          transition: 'border-color 200ms ease',
+          transition: 'border-color 200ms ease, background-color 200ms ease',
         }}
       >
         <div
@@ -128,7 +149,8 @@ export default function Header() {
               type="button"
               className="mobile-toggle"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle Navigation Menu"
+              aria-expanded={mobileMenuOpen}
+              aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
               style={{
                 display: 'none',
                 flexDirection: 'column',
