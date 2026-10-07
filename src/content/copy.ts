@@ -159,19 +159,19 @@ export const COPY = {
       faqs: [
         {
           question: "DO YOU OFFER CONSULTATIONS?",
-          answer: "TODO(cliente): Información sobre consultas personalizadas presenciales o virtuales.",
+          answer: "Yes! We offer personalized consultations for all lash styling, hair transformations, and photography sessions to review your goals, eye shape, hair texture, and customized recommendations.",
         },
         {
           question: "HOW DO I BOOK AN APPOINTMENT?",
-          answer: "TODO(cliente): Pasos para reservar en línea mediante nuestro portal oficial de reservas.",
+          answer: "You can book directly 24/7 through our online portal by clicking 'BOOK NOW', or text/call our studio team. For customized packages or group events, reach out through our contact form.",
         },
         {
           question: "WHAT IS YOUR CANCELLATION POLICY?",
-          answer: "TODO(cliente): Políticas y tiempos de aviso para cancelaciones y reprogramaciones.",
+          answer: "We kindly request at least 24 to 48 hours advance notice for cancellations or rescheduling to allow us to offer the appointment slot to other waiting clients.",
         },
         {
           question: "CAN I BOOK A PRIVATE CLASS OR GROUP EVENT?",
-          answer: "TODO(cliente): Requisitos y disponibilidad para sesiones privadas o eventos grupales.",
+          answer: "Absolutely! We love hosting private 1-on-1 masterclasses, bridal parties, and private group experiences. Contact us with your dates and guest count to arrange a bespoke session.",
         },
       ],
       faqFooterScript: "Still have questions?",

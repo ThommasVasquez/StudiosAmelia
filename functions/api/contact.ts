@@ -1,6 +1,7 @@
 interface Env {
   TURNSTILE_SECRET?: string;
   RESEND_API_KEY?: string;
+  GHL_WEBHOOK_URL?: string;
 }
 
 interface ContactPayload {
@@ -31,7 +32,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   try {
     const data = (await context.request.json()) as ContactPayload;
 
-    // Honeypot check
+    // Honeypot anti-spam check
     if (data._honey) {
       return new Response(JSON.stringify({ success: true, message: "Message received." }), {
         status: 200,
@@ -76,6 +77,39 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
           JSON.stringify({ error: "Security check failed." }),
           { status: 400, headers: { "Content-Type": "application/json" } }
         );
+      }
+    }
+
+    // Split first and last name for GoHighLevel CRM contact creation
+    const nameParts = name.trim().split(/\s+/);
+    const firstName = nameParts[0] || name;
+    const lastName = nameParts.slice(1).join(" ") || "";
+
+    // Forward Lead to GoHighLevel (GHL) CRM if Webhook URL is configured
+    if (context.env.GHL_WEBHOOK_URL) {
+      try {
+        await fetch(context.env.GHL_WEBHOOK_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            firstName,
+            lastName,
+            name,
+            email,
+            phone,
+            interest,
+            message,
+            source: "Studios at Amelia Website",
+            tags: ["Website Lead", "Studios at Amelia", interest],
+            customFields: {
+              service_interest: interest,
+              inquiry_notes: message,
+            },
+            submittedAt: new Date().toISOString(),
+          }),
+        });
+      } catch (ghlErr) {
+        console.error("Error forwarding lead to GoHighLevel:", ghlErr);
       }
     }
 
