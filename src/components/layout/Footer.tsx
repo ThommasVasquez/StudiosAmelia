@@ -192,37 +192,23 @@ export default function Footer({ className = '' }: FooterProps) {
           >
             <EnergySoftLogo
               className="dev-signature-logo"
-              height="calc(28 * var(--u))"
+              height="calc(24 * var(--u))"
             />
-            <div
+            <span
+              className="dev-signature-text"
               style={{
-                display: 'flex',
-                flexDirection: 'column',
-                textAlign: 'left',
-                lineHeight: 1.35,
+                fontSize: 'calc(10 * var(--u))',
+                color: 'var(--muted)',
+                letterSpacing: '0.01em',
+                lineHeight: 1,
+                whiteSpace: 'nowrap',
                 fontFamily: 'var(--font-dm-sans, -apple-system, BlinkMacSystemFont, sans-serif)',
               }}
             >
-              <span
-                style={{
-                  fontSize: 'calc(10 * var(--u))',
-                  color: 'var(--muted)',
-                  letterSpacing: '0.01em',
-                }}
-              >
-                Desarrollado con todo el poder de{' '}
-                <strong style={{ color: 'var(--ink)', fontWeight: 700 }}>ENERGYSOFTmedia®</strong>
-              </span>
-              <span
-                style={{
-                  fontSize: 'calc(9 * var(--u))',
-                  color: 'var(--muted)',
-                  fontWeight: 400,
-                }}
-              >
-                | Software con Energía! <span style={{ color: '#D99A2B' }}>⚡</span>
-              </span>
-            </div>
+              Desarrollado con todo el poder de{' '}
+              <strong style={{ color: 'var(--ink)', fontWeight: 700 }}>ENERGYSOFTmedia®</strong>{' '}
+              | Software con Energía! <span style={{ color: '#D99A2B' }}>⚡</span>
+            </span>
           </a>
         </div>
       </div>
@@ -245,22 +231,47 @@ export default function Footer({ className = '' }: FooterProps) {
             display: none !important;
           }
           .developer-signature-bar {
-            padding: 14px 16px !important;
+            padding: 12px 16px !important;
           }
           .dev-signature-link {
             flex-direction: row !important;
-            gap: 12px !important;
+            flex-wrap: nowrap !important;
+            white-space: nowrap !important;
+            gap: 10px !important;
             align-items: center !important;
-            text-align: left !important;
+            justify-content: center !important;
           }
           :global(.dev-signature-logo) {
-            height: 26px !important;
+            height: 22px !important;
+            flex-shrink: 0 !important;
           }
-          .dev-signature-link div span:first-child {
+          .dev-signature-text {
             font-size: 11px !important;
+            white-space: nowrap !important;
           }
-          .dev-signature-link div span:last-child {
-            font-size: 10px !important;
+        }
+
+        @media (max-width: 540px) {
+          .developer-signature-bar {
+            padding: 10px 12px !important;
+          }
+          .dev-signature-link {
+            gap: 8px !important;
+          }
+          :global(.dev-signature-logo) {
+            height: 18px !important;
+          }
+          .dev-signature-text {
+            font-size: 9.5px !important;
+          }
+        }
+
+        @media (max-width: 380px) {
+          :global(.dev-signature-logo) {
+            height: 16px !important;
+          }
+          .dev-signature-text {
+            font-size: 8.5px !important;
           }
         }
       `}</style>
