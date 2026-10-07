@@ -1,0 +1,2 @@
+# www -> apex (ajustar al dominio real del cliente)
+https://www.studiosatamelia.com/* https://studiosatamelia.com/:splat 301
