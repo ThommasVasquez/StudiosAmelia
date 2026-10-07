@@ -6,7 +6,6 @@ import BrowBlock from '@/components/beauty/BrowBlock';
 import HairBlock from '@/components/beauty/HairBlock';
 import MakeupBlock from '@/components/beauty/MakeupBlock';
 import GlamBand from '@/components/beauty/GlamBand';
-import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Beauty Salon & Lash Extensions | Dominican Blowout & Brows | Fernandina Beach, FL',
@@ -33,7 +32,6 @@ export default function BeautyPage() {
       <HairBlock />
       <MakeupBlock />
       <GlamBand />
-      <Footer />
     </main>
   );
 }

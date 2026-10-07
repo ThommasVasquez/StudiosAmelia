@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Bodoni_Moda, Cormorant_Garamond, DM_Sans, Mrs_Saint_Delafield } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 import { getLocalBusinessSchema } from '@/lib/seo';
 
 const bodoni = Bodoni_Moda({
@@ -133,6 +134,7 @@ export default function RootLayout({
       <body className="font-sans">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
