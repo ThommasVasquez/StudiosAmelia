@@ -15,7 +15,7 @@ export default function EnergySoftLogo({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="40 30 2410 660"
-      className={className}
+      className={`energysoft-logo-svg ${className}`}
       style={{
         height,
         width: 'auto',
@@ -42,20 +42,27 @@ export default function EnergySoftLogo({
             100% { transform: translate(0, 0); }
           }
 
-          .es-bolt-glitch-cyan {
+          .es-bolt-glitch-cyan,
+          .es-bolt-glitch-magenta {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s ease;
+          }
+
+          .energysoft-logo-svg:hover .es-bolt-glitch-cyan,
+          .dev-signature-link:hover .es-bolt-glitch-cyan {
             opacity: 0.85;
             mix-blend-mode: screen;
             filter: hue-rotate(-90deg) contrast(2) saturate(2);
             animation: es-glitch-shift 0.8s ease-in-out infinite alternate;
-            pointer-events: none;
           }
 
-          .es-bolt-glitch-magenta {
+          .energysoft-logo-svg:hover .es-bolt-glitch-magenta,
+          .dev-signature-link:hover .es-bolt-glitch-magenta {
             opacity: 0.85;
             mix-blend-mode: multiply;
             filter: hue-rotate(90deg) contrast(2) saturate(2);
             animation: es-glitch-shift 1.2s ease-in-out infinite alternate-reverse;
-            pointer-events: none;
           }
         `}</style>
       </defs>
