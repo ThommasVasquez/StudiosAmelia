@@ -160,8 +160,8 @@ export default function Footer({ className = '' }: FooterProps) {
       <div
         className="developer-signature-bar"
         style={{
-          backgroundColor: '#28427C',
-          borderTop: '1px solid rgba(255, 255, 255, 0.12)',
+          backgroundColor: 'var(--bg)',
+          borderTop: '1px solid var(--hairline)',
           padding: 'calc(11 * var(--u)) 0',
           width: '100%',
         }}
@@ -185,15 +185,15 @@ export default function Footer({ className = '' }: FooterProps) {
               alignItems: 'center',
               gap: 'calc(14 * var(--u))',
               textDecoration: 'none',
-              color: '#FFFFFF',
+              color: 'var(--text)',
               transition: 'opacity 200ms ease, transform 200ms ease',
             }}
           >
             <img
-              src="/images/shared/energysoft-logo.png"
+              src="/images/shared/energysoft-logo-clean.png"
               alt="ENERGYSOFT MEDIA"
               style={{
-                height: 'calc(26 * var(--u))',
+                height: 'calc(24 * var(--u))',
                 width: 'auto',
                 objectFit: 'contain',
                 display: 'block',
@@ -211,21 +211,21 @@ export default function Footer({ className = '' }: FooterProps) {
               <span
                 style={{
                   fontSize: 'calc(10 * var(--u))',
-                  color: 'rgba(255, 255, 255, 0.95)',
+                  color: 'var(--muted)',
                   letterSpacing: '0.01em',
                 }}
               >
                 Desarrollado con todo el poder de{' '}
-                <strong style={{ color: '#FFFFFF', fontWeight: 700 }}>ENERGYSOFTmedia®</strong>
+                <strong style={{ color: 'var(--ink)', fontWeight: 700 }}>ENERGYSOFTmedia®</strong>
               </span>
               <span
                 style={{
                   fontSize: 'calc(9 * var(--u))',
-                  color: 'rgba(255, 255, 255, 0.85)',
+                  color: 'var(--muted)',
                   fontWeight: 400,
                 }}
               >
-                | Software con Energía! ⚡
+                | Software con Energía! <span style={{ color: '#D99A2B' }}>⚡</span>
               </span>
             </div>
           </a>
