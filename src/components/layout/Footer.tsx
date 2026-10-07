@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { SITE } from '@/lib/site';
+import EnergySoftLogo from '@/components/shared/EnergySoftLogo';
 
 interface FooterProps {
   className?: string;
@@ -189,15 +190,9 @@ export default function Footer({ className = '' }: FooterProps) {
               transition: 'opacity 200ms ease, transform 200ms ease',
             }}
           >
-            <img
-              src="/images/shared/energysoft-logo-clean.png"
-              alt="ENERGYSOFT MEDIA"
-              style={{
-                height: 'calc(26 * var(--u))',
-                width: 'auto',
-                objectFit: 'contain',
-                display: 'block',
-              }}
+            <EnergySoftLogo
+              className="dev-signature-logo"
+              height="calc(28 * var(--u))"
             />
             <div
               style={{
@@ -258,7 +253,7 @@ export default function Footer({ className = '' }: FooterProps) {
             align-items: center !important;
             text-align: left !important;
           }
-          .dev-signature-link img {
+          :global(.dev-signature-logo) {
             height: 26px !important;
           }
           .dev-signature-link div span:first-child {
