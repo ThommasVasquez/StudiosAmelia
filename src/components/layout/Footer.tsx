@@ -193,7 +193,7 @@ export default function Footer({ className = '' }: FooterProps) {
               src="/images/shared/energysoft-logo-clean.png"
               alt="ENERGYSOFT MEDIA"
               style={{
-                height: 'calc(24 * var(--u))',
+                height: 'calc(26 * var(--u))',
                 width: 'auto',
                 objectFit: 'contain',
                 display: 'block',
