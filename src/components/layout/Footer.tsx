@@ -1,8 +1,10 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { SITE } from '@/lib/site';
 import EnergySoftLogo from '@/components/shared/EnergySoftLogo';
+import BrandLogo from '@/components/shared/BrandLogo';
 
 interface FooterProps {
   className?: string;
@@ -42,20 +44,15 @@ export default function Footer({ className = '' }: FooterProps) {
             width: '100%',
           }}
         >
-          {/* Brand Logo text */}
+          {/* Brand Logo */}
           <div style={{ display: 'flex', alignItems: 'center' }}>
-            <span
-              className="font-serif"
-              style={{
-                fontSize: 'calc(20 * var(--u))',
-                letterSpacing: '0.04em',
-                fontWeight: 400,
-                color: 'var(--ink)',
-                lineHeight: 1,
-              }}
+            <Link
+              href="/"
+              aria-label="Studios at Amelia"
+              style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}
             >
-              STUDIOS AT AMELIA
-            </span>
+              <BrandLogo height="calc(44 * var(--u))" />
+            </Link>
           </div>
 
           {/* Pin + Address */}

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { COPY } from '@/content/copy';
 import { getBookingUrl } from '@/lib/booking';
+import BrandLogo from '@/components/shared/BrandLogo';
 
 export default function Header() {
   const pathname = usePathname();
@@ -82,26 +83,15 @@ export default function Header() {
           {/* Brand Logo */}
           <Link
             href="/"
+            aria-label="Studios at Amelia"
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: 'calc(6 * var(--u))',
               textDecoration: 'none',
-              color: 'var(--ink)',
+              transition: 'opacity 0.2s ease',
             }}
           >
-            <span style={{ fontSize: 'calc(14 * var(--u))', color: 'var(--ink)' }}>✦</span>
-            <span
-              className="font-serif"
-              style={{
-                fontSize: 'calc(18 * var(--u))',
-                letterSpacing: '0.08em',
-                fontWeight: 500,
-                lineHeight: 1,
-              }}
-            >
-              STUDIOS <span style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontSize: 'calc(17 * var(--u))', fontWeight: 400 }}>at</span> AMELIA
-            </span>
+            <BrandLogo height="calc(36 * var(--u))" />
           </Link>
 
           {/* Desktop Nav */}

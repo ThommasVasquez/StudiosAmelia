@@ -71,6 +71,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://studiosatamelia.com/',
   },
+  icons: {
+    icon: '/icon.png',
+    apple: '/apple-icon.png',
+  },
   openGraph: {
     title: 'Studios at Amelia | Luxury Beauty, Photography & Classes',
     description:
