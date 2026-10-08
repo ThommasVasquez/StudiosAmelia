@@ -228,17 +228,17 @@ TASKS = [
     {
         'src': 'MB1A5957.jpg',
         'dest': 'public/images/classes/avatar-maria.jpg',
-        'w': 300, 'h': 300, 'anchor': (0.5, 0.35)
+        'w': 400, 'h': 400, 'anchor': (0.487, 0.458)
     },
     {
         'src': 'MB1A7751.jpg',
         'dest': 'public/images/classes/avatar-daniela.jpg',
-        'w': 300, 'h': 300, 'anchor': (0.5, 0.32)
+        'w': 400, 'h': 400, 'anchor': (0.516, 0.358)
     },
     {
         'src': 'makeup',
         'dest': 'public/images/classes/avatar-jessica.jpg',
-        'w': 300, 'h': 300, 'anchor': (0.5, 0.35)
+        'w': 400, 'h': 400, 'anchor': (0.644, 0.420)
     },
 
     # CONTACT
