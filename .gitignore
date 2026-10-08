@@ -36,3 +36,7 @@ next-env.d.ts
 # wrangler
 .wrangler/
 
+# staging assets
+scripts/drive_images/
+scripts/contact_sheet.jpg
+

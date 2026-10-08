@@ -28,7 +28,7 @@ const STUDIO_CARDS = [
     href: '/classes/',
     desc: 'Self-makeup workshops, private lessons, masterclasses & creative group experiences.',
     tag: 'EDUCATION',
-    image: '/images/classes/card-selfmakeup.jpg',
+    image: '/images/classes/card-group.jpg',
   },
   {
     title: 'Contact & Location',
@@ -36,7 +36,7 @@ const STUDIO_CARDS = [
     href: '/contact/',
     desc: 'Direct inquiry, studio bookings, Fernandina Beach map & frequently asked questions.',
     tag: 'VISIT US',
-    image: '/images/contact/lounge-chair.jpg',
+    image: '/images/contact/hero-reception.jpg',
   },
 ];
 

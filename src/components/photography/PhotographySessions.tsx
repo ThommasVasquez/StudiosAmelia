@@ -13,21 +13,21 @@ const SESSIONS = [
     subtitle: 'Elevate your presence & executive vision',
     desc: 'Bespoke portrait sessions crafted for entrepreneurs, corporate leaders, artists, and beauty pros. Includes wardrobe guidance, dynamic lighting set-ups, and magazine-quality retouching.',
     tag: 'BRANDING',
-    image: '/images/about/gallery-2.jpg',
+    image: '/images/photography/session-branding.jpg',
   },
   {
     title: 'Beauty & Glamour Portraits',
     subtitle: 'Confidence, radiance & editorial detail',
     desc: 'Harness the full magic of Studios at Amelia: high-end hair styling, professional makeup application, and glamorous editorial studio lighting to celebrate your authentic radiance.',
     tag: 'SIGNATURE',
-    image: '/images/beauty/makeup-glam.jpg',
+    image: '/images/photography/session-glamour.jpg',
   },
   {
-    title: 'Creative & Milestone Sessions',
+    title: 'Creative, Bridal & Milestones',
     subtitle: 'Artistic memories designed to last generations',
-    desc: 'Special milestones, maternity portraits, senior celebrations, and artistic editorial sessions captured in the peaceful, private atmosphere of our Fernandina Beach studio.',
+    desc: 'Special milestones, bridal portraits, senior celebrations, and artistic editorial sessions captured in the peaceful, private atmosphere of our Fernandina Beach studio.',
     tag: 'KEEPSAKES',
-    image: '/images/about/gallery-5.jpg',
+    image: '/images/photography/session-bridal.jpg',
   },
 ];
 

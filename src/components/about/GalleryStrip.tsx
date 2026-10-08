@@ -9,32 +9,32 @@ const GALLERY_ITEMS = [
   {
     type: 'image',
     url: '/images/about/gallery-1.jpg',
-    title: 'Good People Great Beauty',
+    title: 'Team Artistry & Radiance',
   },
   {
     type: 'image',
     url: '/images/about/gallery-2.jpg',
-    title: 'Studio with softbox & stool',
+    title: 'Studio Portrait Sessions',
   },
   {
     type: 'image',
     url: '/images/about/gallery-3.jpg',
-    title: 'Neon Sign',
+    title: 'Dominican Blowout Confidence',
   },
   {
     type: 'image',
     url: '/images/about/gallery-4.jpg',
-    title: 'Lash bed & shelving',
+    title: 'Bridal Glamour & Keepsakes',
   },
   {
     type: 'image',
     url: '/images/about/gallery-5.jpg',
-    title: 'Camera on books',
+    title: 'Editorial Fashion Artistry',
   },
   {
     type: 'image',
     url: '/images/about/gallery-6.jpg',
-    title: 'Studio sofa lounge',
+    title: 'Executive & Personal Branding',
   },
 ];
 

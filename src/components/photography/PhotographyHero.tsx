@@ -156,7 +156,7 @@ export default function PhotographyHero() {
               position: 'absolute',
               inset: 0,
               backgroundImage:
-                "linear-gradient(to right, var(--bg) 0%, rgba(246, 241, 238, 0.4) 18%, transparent 35%), url('/images/about/founder-camera-bw.jpg')",
+                "linear-gradient(to right, var(--bg) 0%, rgba(246, 241, 238, 0.4) 18%, transparent 35%), url('/images/photography/hero-photography.jpg')",
               backgroundSize: 'cover',
               backgroundPosition: 'center 25%',
             }}

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description:
       'Professional photography sessions in Fernandina Beach, Amelia Island, FL. Executive branding, glamour portraits, and artistic studio shoots.',
     url: 'https://studiosatamelia.com/photography/',
-    images: ['https://studiosatamelia.com/images/about/founder-camera-bw.jpg'],
+    images: ['https://studiosatamelia.com/images/photography/hero-photography.jpg'],
   },
 };
 

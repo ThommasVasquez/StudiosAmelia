@@ -62,7 +62,7 @@ export function getLocalBusinessSchema() {
         name: 'Studios at Amelia',
         legalName: 'Studios at Amelia LLC',
         url: 'https://studiosatamelia.com',
-        logo: 'https://studiosatamelia.com/images/about/mission-studio.jpg',
+        logo: 'https://studiosatamelia.com/images/shared/studios-at-amelia-logo.jpg',
         image: [
           'https://studiosatamelia.com/images/contact/hero-reception.jpg',
           'https://studiosatamelia.com/images/classes/hero-vanity.jpg',
