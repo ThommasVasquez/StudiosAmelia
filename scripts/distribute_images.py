@@ -42,19 +42,19 @@ def smart_crop_resize(img_path, target_w, target_h, anchor=(0.5, 0.4), quality=8
 TASKS = [
     # ABOUT
     {
-        'src': '001_Cris',
+        'src': 'IMG_4734_1.JPG',
         'dest': 'public/images/about/hero-cris.jpg',
-        'w': 1200, 'h': 800, 'anchor': (0.5, 0.35)
+        'w': 1200, 'h': 800, 'anchor': (0.5, 0.36)
     },
     {
         'src': 'IMG_4734_1.JPG',
         'dest': 'public/images/about/founder-portrait.jpg',
-        'w': 800, 'h': 1100, 'anchor': (0.5, 0.38)
+        'w': 800, 'h': 1100, 'anchor': (0.5, 0.40)
     },
     {
-        'src': 'MB1A7277_2.jpg',
+        'src': '001_Cris',
         'dest': 'public/images/about/founder-camera-bw.jpg',
-        'w': 800, 'h': 800, 'anchor': (0.5, 0.42)
+        'w': 800, 'h': 800, 'anchor': (0.5, 0.35)
     },
     {
         'src': 'IMG_0850.JPEG',
