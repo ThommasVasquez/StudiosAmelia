@@ -39,20 +39,22 @@ export default function ExperienceBlock() {
       style={{
         backgroundColor: 'var(--bg)',
         borderBottom: '1px solid var(--hairline)',
-        height: 'calc(261 * var(--u))',
+        minHeight: 'calc(320 * var(--u))',
         position: 'relative',
         display: 'flex',
         alignItems: 'stretch',
+        paddingBlock: 'calc(20 * var(--u))',
       }}
     >
       <div
         className="site-container experience-container"
         style={{
           display: 'grid',
-          gridTemplateColumns: 'calc(452 * var(--u)) 1fr 1px calc(240 * var(--u))',
-          gap: 'calc(20 * var(--u))',
+          gridTemplateColumns: 'calc(400 * var(--u)) 1fr 1px calc(240 * var(--u))',
+          gap: 'calc(24 * var(--u))',
           height: '100%',
           width: '100%',
+          alignItems: 'center',
         }}
       >
         {/* Left Image with overlay script (x 0–452) */}

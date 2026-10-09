@@ -22,6 +22,13 @@ export default function ClassesHero() {
         stagger: 0.1,
         ease: 'power3.out',
       });
+      gsap.from('.classes-wall-script', {
+        opacity: 0,
+        scale: 0.9,
+        duration: 1,
+        delay: 0.4,
+        ease: 'power2.out',
+      });
     },
     { scope: containerRef }
   );
@@ -33,40 +40,36 @@ export default function ClassesHero() {
       style={{
         position: 'relative',
         backgroundColor: 'var(--bg)',
-        height: 'calc(420 * var(--u))',
+        minHeight: 'calc(420 * var(--u))',
         borderBottom: '1px solid var(--hairline)',
         overflow: 'hidden',
       }}
     >
-      {/* Background with vanity mirror & bulbs, left gradient to --bg */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage:
-            "linear-gradient(to right, var(--bg) 0%, rgba(246, 241, 238, 0.5) 35%, transparent 60%), url('/images/classes/hero-vanity.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
-
       <div
         className="site-container classes-hero-container"
         style={{
-          height: '100%',
+          minHeight: 'calc(420 * var(--u))',
           display: 'grid',
-          gridTemplateColumns: '1.2fr 0.9fr 0.9fr',
-          alignItems: 'center',
-          paddingLeft: 'calc(60 * var(--u))',
-          paddingRight: 'calc(50 * var(--u))',
+          gridTemplateColumns: '1.1fr 1.25fr',
           position: 'relative',
-          zIndex: 2,
+          height: '100%',
         }}
       >
-        {/* Left Column: Eyebrow, H1, paragraph, CTA, tagline */}
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
+        {/* Left Column: Eyebrow, H1, paragraph, CTA, Pillars */}
+        <div
+          className="classes-hero-left"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            paddingLeft: 'calc(55 * var(--u))',
+            paddingRight: 'calc(35 * var(--u))',
+            paddingBlock: 'calc(45 * var(--u))',
+            zIndex: 2,
+          }}
+        >
           <div className="anim-classes-hero">
-            <Eyebrow style={{ marginBottom: 'calc(10 * var(--u))' }}>
+            <Eyebrow style={{ marginBottom: 'calc(12 * var(--u))' }}>
               {hero.eyebrow}
             </Eyebrow>
           </div>
@@ -74,11 +77,12 @@ export default function ClassesHero() {
           <h1
             className="font-serif anim-classes-hero"
             style={{
-              fontSize: 'calc(54 * var(--u))',
+              fontSize: 'calc(52 * var(--u))',
               lineHeight: 1.02,
+              letterSpacing: '-0.01em',
               fontWeight: 400,
               color: 'var(--ink)',
-              marginBottom: 'calc(16 * var(--u))',
+              marginBottom: 'calc(18 * var(--u))',
             }}
           >
             {hero.h1Line1}
@@ -90,6 +94,7 @@ export default function ClassesHero() {
                 fontFamily: 'var(--font-cormorant)',
                 fontStyle: 'italic',
                 fontWeight: 500,
+                color: 'var(--ink)',
               }}
             >
               {hero.h1Line3Italic}
@@ -99,22 +104,25 @@ export default function ClassesHero() {
           <p
             className="anim-classes-hero"
             style={{
-              fontSize: 'calc(13.5 * var(--u))',
-              lineHeight: 1.48,
+              fontSize: 'calc(13 * var(--u))',
+              lineHeight: 1.5,
               color: 'var(--text)',
-              maxWidth: 'calc(340 * var(--u))',
-              marginBottom: 'calc(20 * var(--u))',
+              maxWidth: 'calc(380 * var(--u))',
+              marginBottom: 'calc(24 * var(--u))',
             }}
           >
             {hero.paragraph}
           </p>
 
-          <div className="anim-classes-hero" style={{ marginBottom: 'calc(26 * var(--u))' }}>
+          <div
+            className="anim-classes-hero"
+            style={{ marginBottom: 'calc(28 * var(--u))' }}
+          >
             <Button
               variant="solid-black"
               href="#classes"
               style={{
-                width: 'calc(204 * var(--u))',
+                width: 'calc(200 * var(--u))',
                 height: 'calc(36 * var(--u))',
               }}
             >
@@ -122,72 +130,110 @@ export default function ClassesHero() {
             </Button>
           </div>
 
+          {/* Pillars Row */}
           <div
-            className="anim-classes-hero"
+            className="anim-classes-hero classes-pillars-row"
             style={{
-              fontSize: 'calc(9.5 * var(--u))',
-              letterSpacing: '0.3em',
-              color: 'var(--muted)',
-              fontWeight: 500,
-              textTransform: 'uppercase',
+              display: 'flex',
+              alignItems: 'center',
+              flexWrap: 'wrap',
+              gap: 'calc(8 * var(--u))',
             }}
           >
-            {hero.tagline}
+            {['SKILLS', 'CONFIDENCE', 'SELF-LOVE', 'COMMUNITY'].map(
+              (pillar, idx) => (
+                <span
+                  key={pillar}
+                  style={{
+                    fontSize: 'calc(9 * var(--u))',
+                    letterSpacing: '0.2em',
+                    color: 'var(--muted)',
+                    fontWeight: 600,
+                    textTransform: 'uppercase',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 'calc(8 * var(--u))',
+                  }}
+                >
+                  {pillar}
+                  {idx < 3 && (
+                    <span style={{ color: 'var(--tan-line)', opacity: 0.8 }}>
+                      ·
+                    </span>
+                  )}
+                </span>
+              )
+            )}
           </div>
         </div>
 
-        {/* Center: Mirror script (x 490–580) */}
+        {/* Right Bleed Photo Visual */}
         <div
-          className="classes-mirror-script"
+          className="classes-hero-right"
           style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
+            position: 'relative',
+            height: '100%',
+            minHeight: 'calc(380 * var(--u))',
+            overflow: 'hidden',
           }}
         >
-          <ScriptText
-            rotation={-8}
-            style={{
-              fontSize: 'calc(32 * var(--u))',
-              color: 'var(--ink)',
-              lineHeight: 1.25,
-            }}
-          >
-            {hero.mirrorScript}
-          </ScriptText>
-        </div>
-
-        {/* Right: Skills List (x 885) */}
-        <div
-          className="classes-side-list"
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-end',
-            justifyContent: 'center',
-          }}
-        >
+          {/* Main Photo with smooth edge fade */}
           <div
             style={{
-              fontSize: 'calc(11 * var(--u))',
-              letterSpacing: '0.3em',
-              lineHeight: 1.8,
-              color: 'var(--ink)',
-              fontWeight: 500,
-              whiteSpace: 'pre-line',
-              textAlign: 'right',
-            }}
-          >
-            {hero.sideList}
-          </div>
-          <div
-            style={{
-              width: 'calc(40 * var(--u))',
-              height: '1px',
-              backgroundColor: 'var(--ink)',
-              marginTop: 'calc(8 * var(--u))',
+              position: 'absolute',
+              inset: 0,
+              backgroundImage:
+                "linear-gradient(to right, var(--bg) 0%, rgba(246, 241, 238, 0.35) 15%, transparent 30%), url('/images/classes/hero-vanity.jpg')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center 20%',
             }}
           />
+
+          {/* Wall Script top right */}
+          <div
+            className="classes-wall-script"
+            style={{
+              position: 'absolute',
+              top: 'calc(26 * var(--u))',
+              right: 'calc(45 * var(--u))',
+              zIndex: 3,
+            }}
+          >
+            <ScriptText
+              rotation={-7}
+              style={{
+                fontSize: 'calc(34 * var(--u))',
+                color: 'rgba(28, 26, 25, 0.72)',
+                lineHeight: 1.15,
+                textShadow: '0 0 1px rgba(0,0,0,0.08)',
+              }}
+            >
+              {hero.mirrorScript}
+            </ScriptText>
+          </div>
+
+          {/* Academy Badge bottom right */}
+          <div
+            className="classes-credit-badge"
+            style={{
+              position: 'absolute',
+              bottom: 'calc(22 * var(--u))',
+              right: 'calc(45 * var(--u))',
+              zIndex: 3,
+            }}
+          >
+            <div
+              style={{
+                fontSize: 'calc(9 * var(--u))',
+                letterSpacing: '0.22em',
+                color: 'rgba(28, 26, 25, 0.65)',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+              }}
+            >
+              STUDIOS AT AMELIA ACADEMY · AMELIA ISLAND, FL
+            </div>
+          </div>
         </div>
       </div>
 
@@ -195,16 +241,21 @@ export default function ClassesHero() {
         @media (max-width: 1023px) {
           .classes-hero {
             height: auto !important;
-            padding: 48px 0 !important;
+            min-height: auto !important;
+            padding: 0 !important;
           }
           .classes-hero-container {
             display: flex !important;
             flex-direction: column !important;
-            gap: 32px !important;
-            padding: 0 20px !important;
+            min-height: auto !important;
           }
-          .classes-side-list {
-            align-items: flex-start !important;
+          .classes-hero-left {
+            padding: 48px 24px 32px !important;
+          }
+          .classes-hero-right {
+            height: 380px !important;
+            min-height: 380px !important;
+            width: 100% !important;
           }
         }
       `}</style>

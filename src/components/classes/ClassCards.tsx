@@ -45,11 +45,11 @@ export default function ClassCards() {
       style={{
         backgroundColor: 'var(--bg)',
         borderBottom: '1px solid var(--hairline)',
-        height: 'calc(410 * var(--u))',
+        minHeight: 'calc(420 * var(--u))',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        paddingBlock: 'calc(20 * var(--u))',
+        paddingBlock: 'calc(40 * var(--u))',
       }}
     >
       <div className="site-container">
