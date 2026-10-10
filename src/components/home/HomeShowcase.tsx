@@ -7,36 +7,36 @@ import ScriptText from '@/components/ui/ScriptText';
 
 const STUDIO_CARDS = [
   {
-    title: 'About the Studio',
-    subtitle: 'More Than A Studio. It’s a Vision.',
-    href: '/about/',
-    desc: 'Meet founder Cris Emiliano, explore our 15+ years of experience, values, and studio gallery.',
-    tag: 'THE VISION',
-    image: '/images/about/hero-cris.jpg',
+    title: 'Photography Services',
+    subtitle: 'Portraits, Branding & Editorial',
+    href: '/photography/',
+    desc: 'Individual portraits, luxury branding, editorial sessions, and creative studio photography captured with natural lighting.',
+    tag: 'PHOTOGRAPHY',
+    image: '/images/photography/hero-photography.jpg',
+  },
+  {
+    title: 'Mini Events & Experiences',
+    subtitle: 'Intimate Gatherings & Celebrations',
+    href: '/classes/',
+    desc: 'Host private celebrations, bridal gatherings, content creation days, and curated creative experiences inside our luxury studio.',
+    tag: 'MINI EVENTS',
+    image: '/images/classes/card-group.jpg',
   },
   {
     title: 'Beauty Services',
     subtitle: 'Look Good. Feel Confident. Be You.',
     href: '/beauty/',
-    desc: 'Lashes, Brows, Dominican Blowout, Updos, No-Makeup & High Glam artistry.',
+    desc: 'Luxury lash extensions, Dominican blowouts, hair styling, and bespoke makeup artistry for shoots, events, and everyday elegance.',
     tag: 'ARTISTRY',
     image: '/images/beauty/panel-lashes.jpg',
   },
   {
-    title: 'Classes & Experiences',
+    title: 'Classes & Masterclasses',
     subtitle: 'Learn. Create. Be Confident.',
     href: '/classes/',
-    desc: 'Self-makeup workshops, private lessons, masterclasses & creative group experiences.',
+    desc: 'Self-makeup workshops, private one-on-one lessons, and hands-on masterclasses designed to build technique and confidence.',
     tag: 'EDUCATION',
-    image: '/images/classes/card-group.jpg',
-  },
-  {
-    title: 'Contact & Location',
-    subtitle: 'We’d Love to Hear From You.',
-    href: '/contact/',
-    desc: 'Direct inquiry, studio bookings, Fernandina Beach map & frequently asked questions.',
-    tag: 'VISIT US',
-    image: '/images/contact/hero-reception.jpg',
+    image: '/images/classes/card-workshops.jpg',
   },
 ];
 
@@ -56,7 +56,7 @@ export default function HomeShowcase() {
         style={{ textAlign: 'center', marginBottom: 'calc(40 * var(--u))' }}
       >
         <Eyebrow style={{ marginBottom: 'calc(12 * var(--u))' }}>
-          EXPLORE THE STUDIOS
+          STUDIOS AT AMELIA · SERVICES & EXPERIENCES
         </Eyebrow>
 
         <h2
@@ -69,7 +69,7 @@ export default function HomeShowcase() {
             marginBottom: 'calc(12 * var(--u))',
           }}
         >
-          Crafted for Beauty, Learning & Connection
+          Photography, Mini Events & Creative Artistry
         </h2>
 
         <ScriptText
@@ -79,7 +79,7 @@ export default function HomeShowcase() {
             color: 'var(--ink)',
           }}
         >
-          Discover our spaces & offerings ♡
+          Explore our offerings & book your experience ♡
         </ScriptText>
       </div>
 

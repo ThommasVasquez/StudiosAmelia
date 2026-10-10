@@ -18,28 +18,28 @@ interface PillarItem {
 
 const PILLARS: PillarItem[] = [
   {
+    icon: 'camera',
+    label: 'PHOTOGRAPHY',
+    tagline: 'Portraits & Studio',
+    href: '/photography/',
+  },
+  {
+    icon: 'heart',
+    label: 'MINI EVENTS',
+    tagline: 'Private Gatherings',
+    href: '/classes/',
+  },
+  {
     icon: 'lotus',
     label: 'BEAUTY',
     tagline: 'Lashes, Hair & Makeup',
     href: '/beauty/',
   },
   {
-    icon: 'camera',
-    label: 'PHOTOGRAPHY',
-    tagline: 'Portraits & Editorial',
-    href: '/photography/',
-  },
-  {
     icon: 'mortarboard',
     label: 'CLASSES',
     tagline: 'Hands-on Masterclasses',
     href: '/classes/',
-  },
-  {
-    icon: 'heart',
-    label: 'COMMUNITY',
-    tagline: 'Amelia Island Sanctuary',
-    href: '/about/',
   },
 ];
 
@@ -126,9 +126,9 @@ export default function HomeHero() {
               marginBottom: 'calc(16 * var(--u))',
             }}
           >
-            Where Beauty,
+            Where Photography,
             <br />
-            Artistry & Education
+            Mini Events & Artistry
             <br />
             <span
               style={{
@@ -151,9 +151,9 @@ export default function HomeHero() {
               marginBottom: 'calc(22 * var(--u))',
             }}
           >
-            A luxury creative sanctuary on Amelia Island bringing together high-end
-            beauty services, professional photography, and hands-on masterclasses under
-            one roof.
+            A luxury creative sanctuary on Amelia Island specializing in professional
+            photography, intimate mini events, high-end beauty services, and hands-on
+            masterclasses.
           </p>
 
           {/* Dual CTAs */}
@@ -169,26 +169,26 @@ export default function HomeHero() {
           >
             <Button
               variant="solid-black"
-              href="/beauty/"
+              href="/photography/"
               style={{
                 height: 'calc(35 * var(--u))',
                 padding: '0 calc(22 * var(--u))',
                 fontSize: 'calc(10 * var(--u))',
               }}
             >
-              EXPLORE SERVICES →
+              BOOK PHOTOGRAPHY →
             </Button>
 
             <Button
               variant="solid-tan"
-              href="/about/"
+              href="/classes/"
               style={{
                 height: 'calc(35 * var(--u))',
                 padding: '0 calc(20 * var(--u))',
                 fontSize: 'calc(10 * var(--u))',
               }}
             >
-              OUR STORY
+              MINI EVENTS & CLASSES
             </Button>
           </div>
 
