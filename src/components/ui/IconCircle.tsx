@@ -11,7 +11,8 @@ export type IconType =
   | 'clock'
   | 'lotus'
   | 'mortarboard'
-  | 'star';
+  | 'star'
+  | 'glasses';
 
 interface IconCircleProps {
   icon: IconType;
@@ -109,6 +110,15 @@ export default function IconCircle({
         return (
           <svg width={iconSize} height={iconSize} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round">
             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>
+        );
+      case 'glasses':
+        return (
+          <svg width={iconSize} height={iconSize} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round">
+            <path d="M8 22h8" />
+            <path d="M12 15v7" />
+            <path d="M5 3h14l-2 8a5 5 0 0 1-10 0L5 3z" />
+            <path d="M6 7h12" />
           </svg>
         );
       default:

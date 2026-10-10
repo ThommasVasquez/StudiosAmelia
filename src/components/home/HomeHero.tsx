@@ -24,7 +24,7 @@ const PILLARS: PillarItem[] = [
     href: '/photography/',
   },
   {
-    icon: 'heart',
+    icon: 'glasses',
     label: 'MINI EVENTS',
     tagline: 'Private Gatherings',
     href: '/classes/',
@@ -119,16 +119,18 @@ export default function HomeHero() {
             className="font-serif anim-home-hero"
             style={{
               fontSize: 'calc(48 * var(--u))',
-              lineHeight: 1.04,
+              lineHeight: 1.05,
               letterSpacing: '-0.01em',
               fontWeight: 400,
               color: 'var(--ink)',
               marginBottom: 'calc(16 * var(--u))',
             }}
           >
-            Where Photography,
+            Where
             <br />
-            Mini Events & Artistry
+            Moments
+            <br />
+            Become
             <br />
             <span
               style={{
@@ -137,7 +139,7 @@ export default function HomeHero() {
                 fontWeight: 500,
               }}
             >
-              Come Together.
+              Memories.
             </span>
           </h1>
 
@@ -151,14 +153,13 @@ export default function HomeHero() {
               marginBottom: 'calc(22 * var(--u))',
             }}
           >
-            A luxury creative sanctuary on Amelia Island specializing in professional
-            photography, intimate mini events, high-end beauty services, and hands-on
-            masterclasses.
+            Your destination for professional photography, intimate events, beauty
+            services, and creative experiences on Amelia Island.
           </p>
 
           {/* Dual CTAs */}
           <div
-            className="anim-home-hero"
+            className="anim-home-hero home-hero-ctas"
             style={{
               display: 'flex',
               alignItems: 'center',
@@ -170,25 +171,27 @@ export default function HomeHero() {
             <Button
               variant="solid-black"
               href="/photography/"
+              className="home-cta-btn"
               style={{
-                height: 'calc(35 * var(--u))',
+                height: 'calc(36 * var(--u))',
                 padding: '0 calc(22 * var(--u))',
                 fontSize: 'calc(10 * var(--u))',
               }}
             >
-              BOOK PHOTOGRAPHY →
+              BOOK A PHOTOSHOOT →
             </Button>
 
             <Button
               variant="solid-tan"
               href="/classes/"
+              className="home-cta-btn"
               style={{
-                height: 'calc(35 * var(--u))',
+                height: 'calc(36 * var(--u))',
                 padding: '0 calc(20 * var(--u))',
                 fontSize: 'calc(10 * var(--u))',
               }}
             >
-              MINI EVENTS & CLASSES
+              EXPLORE OUR SPACE
             </Button>
           </div>
 
@@ -375,24 +378,62 @@ export default function HomeHero() {
         @media (max-width: 1023px) {
           .home-hero {
             height: auto !important;
-            padding: 40px 0 !important;
+            padding: 36px 0 !important;
           }
           .home-hero-container {
             display: flex !important;
             flex-direction: column !important;
-            gap: 32px !important;
+            gap: 28px !important;
           }
           .home-hero-container > div:first-child {
             padding: 0 20px !important;
+            align-items: center !important;
+            text-align: center !important;
           }
-          .home-hero-container > div:last-child {
-            height: 380px !important;
-            margin: 0 20px !important;
+          .home-hero-container h1 {
+            font-size: 38px !important;
+            line-height: 1.08 !important;
+            margin-bottom: 16px !important;
+          }
+          .home-hero-container p {
+            font-size: 14px !important;
+            line-height: 1.5 !important;
+            max-width: 100% !important;
+            margin-inline: auto !important;
+            margin-bottom: 24px !important;
+          }
+          .home-hero-ctas {
+            flex-direction: column !important;
+            width: 100% !important;
+            gap: 12px !important;
+            margin-bottom: 24px !important;
+            align-items: stretch !important;
+          }
+          .home-hero-ctas :global(.site-button) {
+            width: 100% !important;
+            max-width: 100% !important;
+            height: 44px !important;
+            font-size: 11px !important;
           }
           .home-pillars-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
-            gap: 16px !important;
+            grid-template-columns: repeat(4, 1fr) !important;
+            gap: 8px !important;
+            width: 100% !important;
             max-width: 100% !important;
+            padding-top: 18px !important;
+          }
+          .home-pillar-link span:first-of-type {
+            font-size: 8.5px !important;
+            letter-spacing: 0.1em !important;
+            margin-top: 4px !important;
+          }
+          .home-pillar-link span:last-of-type {
+            display: none !important;
+          }
+          .home-hero-container > div:last-child {
+            height: 340px !important;
+            margin: 0 16px !important;
+            border-radius: 4px !important;
           }
           .home-wall-script {
             top: 16px !important;

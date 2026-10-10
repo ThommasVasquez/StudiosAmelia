@@ -7,35 +7,39 @@ import ScriptText from '@/components/ui/ScriptText';
 
 const STUDIO_CARDS = [
   {
-    title: 'Photography Services',
-    subtitle: 'Portraits, Branding & Editorial',
+    num: '01',
+    title: 'PHOTOGRAPHY',
+    tag: 'MAIN FOCUS',
     href: '/photography/',
-    desc: 'Individual portraits, luxury branding, editorial sessions, and creative studio photography captured with natural lighting.',
-    tag: 'PHOTOGRAPHY',
+    btnText: 'BOOK A PHOTOSHOOT →',
+    desc: 'Branding, portraits, family, birthdays, weddings, content creation and more.',
     image: '/images/photography/hero-photography.jpg',
   },
   {
-    title: 'Mini Events & Experiences',
-    subtitle: 'Intimate Gatherings & Celebrations',
+    num: '02',
+    title: 'MINI EVENTS',
+    tag: null,
     href: '/classes/',
-    desc: 'Host private celebrations, bridal gatherings, content creation days, and curated creative experiences inside our luxury studio.',
-    tag: 'MINI EVENTS',
+    btnText: 'EXPLORE OUR SPACE →',
+    desc: 'Intimate celebrations, creative gatherings, private experiences and studio rental.',
     image: '/images/classes/card-group.jpg',
   },
   {
-    title: 'Beauty Services',
-    subtitle: 'Look Good. Feel Confident. Be You.',
+    num: '03',
+    title: 'BEAUTY',
+    tag: null,
     href: '/beauty/',
-    desc: 'Luxury lash extensions, Dominican blowouts, hair styling, and bespoke makeup artistry for shoots, events, and everyday elegance.',
-    tag: 'ARTISTRY',
+    btnText: 'EXPLORE BEAUTY SERVICES →',
+    desc: 'Lashes, brows, hair and makeup by beauty specialists.',
     image: '/images/beauty/panel-lashes.jpg',
   },
   {
-    title: 'Classes & Masterclasses',
-    subtitle: 'Learn. Create. Be Confident.',
+    num: '04',
+    title: 'CLASSES & EXPERIENCES',
+    tag: null,
     href: '/classes/',
-    desc: 'Self-makeup workshops, private one-on-one lessons, and hands-on masterclasses designed to build technique and confidence.',
-    tag: 'EDUCATION',
+    btnText: 'VIEW CLASSES →',
+    desc: 'Beauty education, makeup workshops and hands-on creative experiences.',
     image: '/images/classes/card-workshops.jpg',
   },
 ];
@@ -56,7 +60,7 @@ export default function HomeShowcase() {
         style={{ textAlign: 'center', marginBottom: 'calc(40 * var(--u))' }}
       >
         <Eyebrow style={{ marginBottom: 'calc(12 * var(--u))' }}>
-          STUDIOS AT AMELIA · SERVICES & EXPERIENCES
+          STUDIOS AT AMELIA · SERVICES & FOCUS
         </Eyebrow>
 
         <h2
@@ -79,7 +83,7 @@ export default function HomeShowcase() {
             color: 'var(--ink)',
           }}
         >
-          Explore our offerings & book your experience ♡
+          Designed with Photography & Mini Events as our main focus ♡
         </ScriptText>
       </div>
 
@@ -96,14 +100,14 @@ export default function HomeShowcase() {
       >
         {STUDIO_CARDS.map((card) => (
           <Link
-            key={card.href}
+            key={card.href + card.num}
             href={card.href}
             className="home-feature-card"
             style={{
               display: 'flex',
               flexDirection: 'column',
               backgroundColor: 'var(--bg-alt)',
-              border: '1px solid var(--hairline)',
+              border: card.tag ? '1.5px solid var(--ink)' : '1px solid var(--hairline)',
               overflow: 'hidden',
               textDecoration: 'none',
               color: 'inherit',
@@ -132,23 +136,24 @@ export default function HomeShowcase() {
                   transition: 'transform 400ms ease',
                 }}
               />
-              <div
-                style={{
-                  position: 'absolute',
-                  top: 'calc(12 * var(--u))',
-                  left: 'calc(12 * var(--u))',
-                  backgroundColor: 'rgba(246, 241, 238, 0.92)',
-                  backdropFilter: 'blur(4px)',
-                  padding: 'calc(4 * var(--u)) calc(10 * var(--u))',
-                  fontSize: 'calc(8 * var(--u))',
-                  letterSpacing: '0.18em',
-                  fontWeight: 600,
-                  color: 'var(--ink)',
-                  textTransform: 'uppercase',
-                }}
-              >
-                {card.tag}
-              </div>
+              {card.tag ? (
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: 'calc(12 * var(--u))',
+                    left: 'calc(12 * var(--u))',
+                    backgroundColor: 'var(--ink)',
+                    color: 'var(--bg)',
+                    padding: 'calc(4 * var(--u)) calc(10 * var(--u))',
+                    fontSize: 'calc(8 * var(--u))',
+                    letterSpacing: '0.18em',
+                    fontWeight: 600,
+                    textTransform: 'uppercase',
+                  }}
+                >
+                  {card.tag}
+                </div>
+              ) : null}
             </div>
 
             {/* Card Body */}
@@ -162,37 +167,45 @@ export default function HomeShowcase() {
               }}
             >
               <div>
-                <h3
-                  className="font-serif"
-                  style={{
-                    fontSize: 'calc(19 * var(--u))',
-                    fontWeight: 500,
-                    color: 'var(--ink)',
-                    marginBottom: 'calc(4 * var(--u))',
-                    lineHeight: 1.2,
-                  }}
-                >
-                  {card.title}
-                </h3>
-
                 <div
                   style={{
-                    fontFamily: 'var(--font-cormorant)',
-                    fontStyle: 'italic',
-                    fontSize: 'calc(13 * var(--u))',
-                    color: 'var(--muted)',
-                    marginBottom: 'calc(10 * var(--u))',
+                    display: 'flex',
+                    alignItems: 'baseline',
+                    gap: 'calc(6 * var(--u))',
+                    marginBottom: 'calc(8 * var(--u))',
                   }}
                 >
-                  {card.subtitle}
+                  <span
+                    style={{
+                      fontSize: 'calc(12 * var(--u))',
+                      fontWeight: 600,
+                      color: 'var(--muted)',
+                      letterSpacing: '0.08em',
+                    }}
+                  >
+                    {card.num}.
+                  </span>
+                  <h3
+                    className="font-serif"
+                    style={{
+                      fontSize: 'calc(18 * var(--u))',
+                      fontWeight: 500,
+                      color: 'var(--ink)',
+                      letterSpacing: '0.02em',
+                      lineHeight: 1.2,
+                      margin: 0,
+                    }}
+                  >
+                    {card.title}
+                  </h3>
                 </div>
 
                 <p
                   style={{
-                    fontSize: 'calc(11.5 * var(--u))',
-                    lineHeight: 1.45,
+                    fontSize: 'calc(12 * var(--u))',
+                    lineHeight: 1.5,
                     color: 'var(--text)',
-                    marginBottom: 'calc(16 * var(--u))',
+                    marginBottom: 'calc(18 * var(--u))',
                   }}
                 >
                   {card.desc}
@@ -203,7 +216,7 @@ export default function HomeShowcase() {
                 style={{
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '6px',
+                  justifyContent: 'space-between',
                   fontSize: 'calc(9 * var(--u))',
                   letterSpacing: '0.16em',
                   fontWeight: 600,
@@ -213,8 +226,7 @@ export default function HomeShowcase() {
                   paddingTop: 'calc(12 * var(--u))',
                 }}
               >
-                <span>EXPLORE PAGE</span>
-                <span>→</span>
+                <span>{card.btnText}</span>
               </div>
             </div>
           </Link>
