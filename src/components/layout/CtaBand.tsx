@@ -35,18 +35,22 @@ export default function CtaBand({ variant = 'about' }: CtaBandProps) {
             width: '100%',
           }}
         >
-          {/* Left Script */}
+          {/* Left Heading */}
           <div>
-            <ScriptText
-              rotation={-8}
+            <h3
+              className="font-serif"
               style={{
-                fontSize: 'calc(44 * var(--u))',
+                fontSize: 'calc(26 * var(--u))',
+                lineHeight: 1.2,
+                fontWeight: 400,
                 color: 'var(--ink)',
-                lineHeight: 1.1,
+                letterSpacing: '0.02em',
+                whiteSpace: 'pre-line',
+                margin: 0,
               }}
             >
               {"Let's Create\nSomething Beautiful. Together."}
-            </ScriptText>
+            </h3>
           </div>
 
           {/* Right Button & Tagline */}
@@ -127,19 +131,22 @@ export default function CtaBand({ variant = 'about' }: CtaBandProps) {
             width: '100%',
           }}
         >
-          {/* Left: Script + Subtitle */}
+          {/* Left: Title + Subtitle */}
           <div>
-            <ScriptText
-              rotation={-8}
+            <h3
+              className="font-serif"
               style={{
-                fontSize: 'calc(52 * var(--u))',
+                fontSize: 'calc(30 * var(--u))',
+                lineHeight: 1.15,
+                fontWeight: 400,
                 color: 'var(--ink)',
-                display: 'block',
+                letterSpacing: '0.02em',
                 marginBottom: 'calc(8 * var(--u))',
+                margin: 0,
               }}
             >
               Invest in You.
-            </ScriptText>
+            </h3>
             <div
               style={{
                 fontSize: 'calc(9.5 * var(--u))',
@@ -191,15 +198,17 @@ export default function CtaBand({ variant = 'about' }: CtaBandProps) {
             >
               📍 {SITE.address1} / {SITE.city.toUpperCase()}
             </div>
-            <ScriptText
-              rotation={-6}
+            <span
+              className="font-serif"
               style={{
-                fontSize: 'calc(26 * var(--u))',
+                fontSize: 'calc(15 * var(--u))',
                 color: 'var(--ink)',
+                letterSpacing: '0.05em',
+                marginBlock: 'calc(2 * var(--u))',
               }}
             >
               Amelia Island
-            </ScriptText>
+            </span>
             <div
               style={{
                 fontSize: 'calc(7.5 * var(--u))',
@@ -265,18 +274,22 @@ export default function CtaBand({ variant = 'about' }: CtaBandProps) {
           width: '100%',
         }}
       >
-        {/* Left: Script */}
+        {/* Left Heading */}
         <div>
-          <ScriptText
-            rotation={-8}
+          <h3
+            className="font-serif"
             style={{
-              fontSize: 'calc(44 * var(--u))',
+              fontSize: 'calc(26 * var(--u))',
+              lineHeight: 1.2,
+              fontWeight: 400,
               color: 'var(--ink)',
-              lineHeight: 1.15,
+              letterSpacing: '0.02em',
+              whiteSpace: 'pre-line',
+              margin: 0,
             }}
           >
             {"Let's Create\nSomething Beautiful,\nTogether."}
-          </ScriptText>
+          </h3>
         </div>
 
         {/* Center: Stacked Buttons */}
@@ -317,15 +330,17 @@ export default function CtaBand({ variant = 'about' }: CtaBandProps) {
           >
             📍 {SITE.address1} / {SITE.city.toUpperCase()}
           </div>
-          <ScriptText
-            rotation={-6}
+          <span
+            className="font-serif"
             style={{
-              fontSize: 'calc(26 * var(--u))',
+              fontSize: 'calc(15 * var(--u))',
               color: 'var(--ink)',
+              letterSpacing: '0.05em',
+              marginBlock: 'calc(2 * var(--u))',
             }}
           >
             Amelia Island
-          </ScriptText>
+          </span>
           <div
             style={{
               fontSize: 'calc(7.5 * var(--u))',

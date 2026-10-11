@@ -143,27 +143,6 @@ export default function AboutHero() {
             }}
           />
 
-          {/* Wall Script (x≈840-975) */}
-          <div
-            className="anim-hero-script hero-wall-script"
-            style={{
-              position: 'absolute',
-              top: 'calc(25 * var(--u))',
-              right: 'calc(45 * var(--u))',
-              zIndex: 3,
-            }}
-          >
-            <ScriptText
-              rotation={-8}
-              style={{
-                fontSize: 'calc(32 * var(--u))',
-                color: 'rgba(28, 26, 25, 0.65)',
-                textShadow: '0 0 1px rgba(0,0,0,0.1)',
-              }}
-            >
-              {hero.wallScript}
-            </ScriptText>
-          </div>
 
           {/* Photo Credit Overlay (x=800, y 355-400) */}
           <div

@@ -50,17 +50,6 @@ export default function QuickAnswers() {
           }}
         />
 
-        <div style={{ marginBottom: 'calc(4 * var(--u))' }}>
-          <ScriptText
-            rotation={-6}
-            style={{
-              fontSize: 'calc(22 * var(--u))',
-              color: 'var(--ink)',
-            }}
-          >
-            {faqData.faqFooterScript}
-          </ScriptText>
-        </div>
 
         <div
           style={{

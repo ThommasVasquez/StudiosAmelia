@@ -188,27 +188,6 @@ export default function BeautyHero() {
             }}
           />
 
-          {/* Wall Script top right */}
-          <div
-            className="beauty-wall-script"
-            style={{
-              position: 'absolute',
-              top: 'calc(24 * var(--u))',
-              right: 'calc(45 * var(--u))',
-              zIndex: 3,
-            }}
-          >
-            <ScriptText
-              rotation={-8}
-              style={{
-                fontSize: 'calc(30 * var(--u))',
-                color: 'var(--ink)',
-                lineHeight: 1.15,
-              }}
-            >
-              {hero.wallScript}
-            </ScriptText>
-          </div>
 
           {/* Sub badge: SAME GIRL. BIGGER DREAMS. */}
           <div

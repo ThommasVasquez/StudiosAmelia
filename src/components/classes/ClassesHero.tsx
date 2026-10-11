@@ -189,28 +189,6 @@ export default function ClassesHero() {
             }}
           />
 
-          {/* Wall Script top right */}
-          <div
-            className="classes-wall-script"
-            style={{
-              position: 'absolute',
-              top: 'calc(26 * var(--u))',
-              right: 'calc(45 * var(--u))',
-              zIndex: 3,
-            }}
-          >
-            <ScriptText
-              rotation={-7}
-              style={{
-                fontSize: 'calc(34 * var(--u))',
-                color: 'rgba(28, 26, 25, 0.72)',
-                lineHeight: 1.15,
-                textShadow: '0 0 1px rgba(0,0,0,0.08)',
-              }}
-            >
-              {hero.mirrorScript}
-            </ScriptText>
-          </div>
 
           {/* Academy Badge bottom right */}
           <div

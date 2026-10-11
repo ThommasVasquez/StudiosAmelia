@@ -88,16 +88,6 @@ export default function GlamBand() {
             gap: 'calc(24 * var(--u))',
           }}
         >
-          <ScriptText
-            rotation={-8}
-            style={{
-              fontSize: 'calc(26 * var(--u))',
-              color: '#FFFFFF',
-              lineHeight: 1.2,
-            }}
-          >
-            {glam.script}
-          </ScriptText>
 
           <div>
             <div

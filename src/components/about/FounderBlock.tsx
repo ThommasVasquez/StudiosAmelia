@@ -184,16 +184,18 @@ export default function FounderBlock() {
           }}
         >
           <div style={{ marginTop: 'calc(10 * var(--u))' }}>
-            <ScriptText
-              rotation={-8}
+            <blockquote
+              className="font-serif"
               style={{
-                fontSize: 'calc(17 * var(--u))',
-                lineHeight: 1.35,
+                fontSize: 'calc(13.5 * var(--u))',
+                lineHeight: 1.5,
                 color: 'var(--ink)',
+                fontStyle: 'normal',
+                margin: 0,
               }}
             >
               {`"${founder.quote}"`}
-            </ScriptText>
+            </blockquote>
           </div>
 
           <div

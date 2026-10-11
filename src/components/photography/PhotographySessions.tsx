@@ -88,15 +88,6 @@ export default function PhotographySessions() {
           Signature Studio Packages
         </h2>
 
-        <ScriptText
-          rotation={-6}
-          style={{
-            fontSize: 'calc(26 * var(--u))',
-            color: 'var(--ink)',
-          }}
-        >
-          Tailored to your story & style ♡
-        </ScriptText>
       </div>
 
       {/* 3 Columns Grid of Sessions */}

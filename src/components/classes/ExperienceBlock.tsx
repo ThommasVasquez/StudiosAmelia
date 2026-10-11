@@ -72,26 +72,7 @@ export default function ExperienceBlock() {
             justifyContent: 'center',
           }}
         >
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              backgroundColor: 'rgba(246, 241, 238, 0.45)',
-            }}
-          />
-          <div style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
-            <ScriptText
-              rotation={-8}
-              style={{
-                fontSize: 'calc(28 * var(--u))',
-                lineHeight: 1.25,
-                color: 'var(--ink)',
-                textShadow: '0 0 10px rgba(255,255,255,0.7)',
-              }}
-            >
-              {exp.mirrorScript}
-            </ScriptText>
-          </div>
+
         </div>
 
         {/* Center: Eyebrow, H2, paragraph, CTA (x 480–800) */}

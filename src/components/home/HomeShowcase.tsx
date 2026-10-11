@@ -76,15 +76,6 @@ export default function HomeShowcase() {
           Photography, Mini Events & Creative Artistry
         </h2>
 
-        <ScriptText
-          rotation={-6}
-          style={{
-            fontSize: 'calc(28 * var(--u))',
-            color: 'var(--ink)',
-          }}
-        >
-          Designed with Photography & Mini Events as our main focus ♡
-        </ScriptText>
       </div>
 
       {/* 4 Editorial Studio Cards */}

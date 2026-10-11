@@ -67,16 +67,19 @@ export default function StatsStrip() {
             }}
           >
             {stat.isScript ? (
-              <ScriptText
-                rotation={-6}
+              <span
+                className="font-serif"
                 style={{
-                  fontSize: 'calc(28 * var(--u))',
+                  fontSize: 'calc(24 * var(--u))',
+                  lineHeight: 1.15,
+                  fontWeight: 400,
                   color: 'var(--ink)',
                   marginBottom: 'calc(4 * var(--u))',
+                  letterSpacing: '0.02em',
                 }}
               >
                 {stat.value}
-              </ScriptText>
+              </span>
             ) : (
               <span
                 className="font-serif stat-number"

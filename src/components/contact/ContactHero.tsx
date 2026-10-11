@@ -107,27 +107,7 @@ export default function ContactHero() {
           {hero.tagline}
         </div>
 
-        {/* Wall Script top right */}
-        <div
-          className="contact-wall-script"
-          style={{
-            position: 'absolute',
-            top: 'calc(30 * var(--u))',
-            right: 'calc(55 * var(--u))',
-            zIndex: 3,
-          }}
-        >
-          <ScriptText
-            rotation={-8}
-            style={{
-              fontSize: 'calc(30 * var(--u))',
-              color: 'var(--ink)',
-              lineHeight: 1.15,
-            }}
-          >
-            {hero.wallScript}
-          </ScriptText>
-        </div>
+
       </div>
 
       <style jsx>{`
