@@ -189,7 +189,7 @@ export default function Header() {
           className="mobile-drawer"
           style={{
             position: 'fixed',
-            top: '60px',
+            top: '52px',
             left: 0,
             right: 0,
             bottom: 0,
@@ -234,16 +234,17 @@ export default function Header() {
       <style jsx>{`
         @media (max-width: 1023px) {
           .site-header {
-            height: 60px !important;
+            height: 52px !important;
           }
           .site-header :global(.brand-logo-img) {
-            height: 32px !important;
-            max-height: 32px !important;
+            height: 22px !important;
+            max-height: 22px !important;
             width: auto !important;
             display: block !important;
+            opacity: 0.95;
           }
           .site-header :global(.site-container) {
-            padding-inline: 20px !important;
+            padding-inline: 18px !important;
           }
           .desktop-nav {
             display: none !important;
