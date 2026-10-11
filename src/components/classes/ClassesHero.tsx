@@ -177,15 +177,15 @@ export default function ClassesHero() {
             overflow: 'hidden',
           }}
         >
-          {/* Main Studio Facade Photo with smooth edge fade */}
+          {/* Main Photo with smooth edge fade */}
           <div
             style={{
               position: 'absolute',
               inset: 0,
               backgroundImage:
-                "linear-gradient(to right, var(--bg) 0%, rgba(246, 241, 238, 0.25) 12%, transparent 28%), url('/images/classes/hero-studio-facade.jpg')",
+                "linear-gradient(to right, var(--bg) 0%, rgba(246, 241, 238, 0.35) 15%, transparent 30%), url('/images/classes/hero-vanity.jpg')",
               backgroundSize: 'cover',
-              backgroundPosition: 'center 45%',
+              backgroundPosition: 'center 20%',
             }}
           />
 

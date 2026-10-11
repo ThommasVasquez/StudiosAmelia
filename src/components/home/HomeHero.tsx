@@ -270,15 +270,15 @@ export default function HomeHero() {
             overflow: 'hidden',
           }}
         >
-          {/* Main Reception Photo with gradient fade */}
+          {/* Main Studio Facade Photo with gradient fade */}
           <div
             style={{
               position: 'absolute',
               inset: 0,
               backgroundImage:
-                "linear-gradient(to right, var(--bg) 0%, rgba(246, 241, 238, 0.4) 18%, transparent 35%), url('/images/contact/hero-reception.jpg')",
+                "linear-gradient(to right, var(--bg) 0%, rgba(246, 241, 238, 0.3) 15%, transparent 32%), url('/images/home/hero-studio-facade.jpg')",
               backgroundSize: 'cover',
-              backgroundPosition: 'center 40%',
+              backgroundPosition: 'center 45%',
             }}
           />
 
