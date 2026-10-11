@@ -177,15 +177,15 @@ export default function ClassesHero() {
             overflow: 'hidden',
           }}
         >
-          {/* Main Photo with smooth edge fade */}
+          {/* Main Studio Facade Photo with smooth edge fade */}
           <div
             style={{
               position: 'absolute',
               inset: 0,
               backgroundImage:
-                "linear-gradient(to right, var(--bg) 0%, rgba(246, 241, 238, 0.35) 15%, transparent 30%), url('/images/classes/hero-vanity.jpg')",
+                "linear-gradient(to right, var(--bg) 0%, rgba(246, 241, 238, 0.25) 12%, transparent 28%), url('/images/classes/hero-studio-facade.jpg')",
               backgroundSize: 'cover',
-              backgroundPosition: 'center 20%',
+              backgroundPosition: 'center 45%',
             }}
           />
 
@@ -202,9 +202,15 @@ export default function ClassesHero() {
           >
             <div
               style={{
-                fontSize: 'calc(9 * var(--u))',
+                fontSize: 'calc(8.5 * var(--u))',
                 letterSpacing: '0.22em',
-                color: 'rgba(28, 26, 25, 0.65)',
+                color: 'var(--ink)',
+                backgroundColor: 'rgba(246, 241, 238, 0.88)',
+                backdropFilter: 'blur(8px)',
+                WebkitBackdropFilter: 'blur(8px)',
+                padding: 'calc(5 * var(--u)) calc(12 * var(--u))',
+                borderRadius: 'calc(2 * var(--u))',
+                border: '1px solid var(--hairline)',
                 fontWeight: 600,
                 textTransform: 'uppercase',
               }}
