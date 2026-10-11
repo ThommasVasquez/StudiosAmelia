@@ -7,6 +7,8 @@ import ScriptText from '@/components/ui/ScriptText';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
+import { getBookingUrl } from '@/lib/booking';
+
 export default function PhotographyHero() {
   const containerRef = useRef<HTMLElement>(null);
 
@@ -118,7 +120,8 @@ export default function PhotographyHero() {
           >
             <Button
               variant="solid-black"
-              href="/contact/"
+              href={getBookingUrl('photography')}
+              isExternal
               style={{
                 height: 'calc(35 * var(--u))',
                 padding: '0 calc(22 * var(--u))',

@@ -6,6 +6,7 @@ import Eyebrow from '@/components/ui/Eyebrow';
 import ScriptText from '@/components/ui/ScriptText';
 import Button from '@/components/ui/Button';
 import IconCircle, { IconType } from '@/components/ui/IconCircle';
+import { getBookingUrl } from '@/lib/booking';
 
 const SESSIONS = [
   {
@@ -213,14 +214,15 @@ export default function PhotographySessions() {
               <div>
                 <Button
                   variant="solid-black"
-                  href="/contact/"
+                  href={getBookingUrl('photography')}
+                  isExternal
                   style={{
                     width: '100%',
                     height: 'calc(35 * var(--u))',
                     fontSize: 'calc(9.5 * var(--u))',
                   }}
                 >
-                  INQUIRE / BOOK SESSION →
+                  BOOK SESSION ONLINE →
                 </Button>
               </div>
             </div>
