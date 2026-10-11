@@ -114,10 +114,6 @@ export default function CtaBand({ variant = 'about' }: CtaBandProps) {
           display: 'flex',
           alignItems: 'center',
           overflow: 'hidden',
-          backgroundImage:
-            "linear-gradient(rgba(246, 241, 238, 0.88), rgba(246, 241, 238, 0.94)), url('/images/classes/classes-cta.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
         }}
       >
         <div
@@ -257,10 +253,6 @@ export default function CtaBand({ variant = 'about' }: CtaBandProps) {
         display: 'flex',
         alignItems: 'center',
         overflow: 'hidden',
-        backgroundImage:
-          "linear-gradient(rgba(246, 241, 238, 0.88), rgba(246, 241, 238, 0.92)), url('/images/shared/dunes-cta.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
       }}
     >
       <div
