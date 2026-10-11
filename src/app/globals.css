@@ -272,7 +272,7 @@ textarea:focus-visible {
 /* Responsive adjustments for mobile < 1024px */
 @media (max-width: 1023px) {
   :root {
-    --u: 1;
+    --u: 1px;
   }
 
   html {

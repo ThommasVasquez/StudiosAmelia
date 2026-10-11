@@ -29,6 +29,7 @@ export default function BrandLogo({
       className={`brand-logo-img ${className}`}
       style={{
         height: typeof height === 'number' ? `${height}px` : height,
+        maxHeight: '100%',
         width: 'auto',
         maxWidth: '100%',
         display: 'block',

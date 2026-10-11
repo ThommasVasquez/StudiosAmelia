@@ -236,6 +236,15 @@ export default function Header() {
           .site-header {
             height: 60px !important;
           }
+          .site-header :global(.brand-logo-img) {
+            height: 32px !important;
+            max-height: 32px !important;
+            width: auto !important;
+            display: block !important;
+          }
+          .site-header :global(.site-container) {
+            padding-inline: 20px !important;
+          }
           .desktop-nav {
             display: none !important;
           }
