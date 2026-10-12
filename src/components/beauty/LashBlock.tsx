@@ -6,11 +6,11 @@ import { COPY } from '@/content/copy';
 import { getBookingUrl } from '@/lib/booking';
 
 const LASH_IMAGES = [
-  '/images/beauty/lash-classic.jpg',
-  '/images/beauty/lash-hybrid.jpg',
-  '/images/beauty/lash-volume.jpg',
-  '/images/beauty/lash-mega.jpg',
-  '/images/beauty/lash-lift.jpg',
+  '/images/beauty/lash-classic-v3.jpg',
+  '/images/beauty/lash-hybrid-v3.jpg',
+  '/images/beauty/lash-volume-v3.jpg',
+  '/images/beauty/lash-mega-volume-v3.jpg',
+  '/images/beauty/lash-lift-curls-v3.jpg',
 ];
 
 export default function LashBlock() {
@@ -22,7 +22,7 @@ export default function LashBlock() {
       style={{
         backgroundColor: 'var(--bg)',
         borderBottom: '1px solid var(--hairline)',
-        height: 'calc(260 * var(--u))',
+        height: 'calc(280 * var(--u))',
         position: 'relative',
         display: 'flex',
         alignItems: 'stretch',
@@ -144,8 +144,9 @@ export default function LashBlock() {
               >
                 {/* Image */}
                 <div
+                  className="lash-card-thumb"
                   style={{
-                    height: 'calc(80 * var(--u))',
+                    height: 'calc(100 * var(--u))',
                     width: '100%',
                     backgroundImage: `url('${LASH_IMAGES[idx]}')`,
                     backgroundSize: 'cover',
@@ -170,6 +171,7 @@ export default function LashBlock() {
 
                 {/* Description */}
                 <p
+                  className="lash-card-desc"
                   style={{
                     fontFamily: 'var(--font-cormorant)',
                     fontStyle: 'italic',
@@ -237,7 +239,18 @@ export default function LashBlock() {
           }
           .cards-grid-5 {
             grid-template-columns: repeat(2, 1fr) !important;
-            gap: 16px !important;
+            gap: 20px 14px !important;
+          }
+          .lash-card-thumb {
+            height: 160px !important;
+            aspect-ratio: 1 / 1 !important;
+            margin-bottom: 12px !important;
+          }
+          .lash-card-desc {
+            height: auto !important;
+            min-height: 44px !important;
+            font-size: 13.5px !important;
+            margin-bottom: 8px !important;
           }
         }
       `}</style>
