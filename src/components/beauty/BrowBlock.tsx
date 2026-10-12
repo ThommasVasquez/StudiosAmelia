@@ -5,10 +5,19 @@ import Button from '@/components/ui/Button';
 import { COPY } from '@/content/copy';
 import { getBookingUrl } from '@/lib/booking';
 
-const BROW_IMAGES = [
-  '/images/beauty/brow-lamination.jpg',
-  '/images/beauty/brow-tint.jpg',
-  '/images/beauty/brow-wax.jpg',
+const BROW_CARDS_CONFIG = [
+  {
+    image: '/images/beauty/brow-lamination.jpg',
+    bgPosition: 'center 75%',
+  },
+  {
+    image: '/images/beauty/brow-tint.jpg',
+    bgPosition: 'center 35%',
+  },
+  {
+    image: '/images/beauty/brow-wax.jpg',
+    bgPosition: 'center 30%',
+  },
 ];
 
 export default function BrowBlock() {
@@ -20,7 +29,7 @@ export default function BrowBlock() {
       style={{
         backgroundColor: 'var(--bg)',
         borderBottom: '1px solid var(--hairline)',
-        height: 'calc(235 * var(--u))',
+        height: 'calc(265 * var(--u))',
         position: 'relative',
         display: 'flex',
         alignItems: 'stretch',
@@ -138,13 +147,14 @@ export default function BrowBlock() {
                 }}
               >
                 <div
+                  className="brow-card-thumb"
                   style={{
-                    height: 'calc(52 * var(--u))',
+                    height: 'calc(85 * var(--u))',
                     width: '100%',
-                    backgroundImage: `url('${BROW_IMAGES[idx]}')`,
+                    backgroundImage: `url('${BROW_CARDS_CONFIG[idx].image}')`,
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    marginBottom: 'calc(8 * var(--u))',
+                    backgroundPosition: BROW_CARDS_CONFIG[idx].bgPosition,
+                    marginBottom: 'calc(10 * var(--u))',
                   }}
                 />
 
@@ -162,6 +172,7 @@ export default function BrowBlock() {
                 </div>
 
                 <p
+                  className="brow-card-desc"
                   style={{
                     fontFamily: 'var(--font-cormorant)',
                     fontStyle: 'italic',
@@ -199,7 +210,7 @@ export default function BrowBlock() {
           className="brow-side-banner"
           style={{
             backgroundColor: 'var(--bg-alt)',
-            height: 'calc(204 * var(--u))',
+            height: 'calc(230 * var(--u))',
             alignSelf: 'center',
             display: 'flex',
             flexDirection: 'column',
@@ -249,7 +260,16 @@ export default function BrowBlock() {
           }
           .cards-grid-3 {
             grid-template-columns: 1fr !important;
-            gap: 16px !important;
+            gap: 24px !important;
+          }
+          .brow-card-thumb {
+            height: 190px !important;
+            margin-bottom: 12px !important;
+          }
+          .brow-card-desc {
+            height: auto !important;
+            font-size: 14px !important;
+            margin-bottom: 12px !important;
           }
           .brow-side-banner {
             width: 100% !important;

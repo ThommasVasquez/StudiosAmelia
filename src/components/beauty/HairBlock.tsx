@@ -140,6 +140,7 @@ export default function HairBlock() {
                 }}
               >
                 <div
+                  className="hair-card-thumb"
                   style={{
                     height: 'calc(100 * var(--u))',
                     backgroundImage: `url('${hairImages[idx]}')`,
@@ -163,6 +164,7 @@ export default function HairBlock() {
                   </div>
 
                   <p
+                    className="hair-card-desc"
                     style={{
                       fontFamily: 'var(--font-cormorant)',
                       fontStyle: 'italic',
@@ -215,7 +217,16 @@ export default function HairBlock() {
           }
           .split-services-grid {
             grid-template-columns: 1fr !important;
-            gap: 20px !important;
+            gap: 24px !important;
+          }
+          .hair-card-thumb {
+            height: 190px !important;
+            margin-bottom: 12px !important;
+          }
+          .hair-card-desc {
+            height: auto !important;
+            font-size: 14px !important;
+            margin-bottom: 12px !important;
           }
         }
       `}</style>
