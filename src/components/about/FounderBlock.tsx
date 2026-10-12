@@ -56,56 +56,37 @@ export default function FounderBlock() {
           height: '100%',
         }}
       >
-        {/* Column A (x 30–214): Camera photo + dark tile with neon script */}
-        <div
-          className="anim-founder-col founder-col-a"
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 'calc(7 * var(--u))',
-            height: '100%',
-          }}
-        >
+        {/* Column A (x 30–214): Top photo + Client photo */}
+        <div className="anim-founder-col founder-col-a">
           {/* Top B/W camera photo */}
-          <div
-            className="founder-tile-top"
-            style={{
-              height: 'calc(190 * var(--u))',
-              backgroundImage:
-                "url('/images/about/founder-camera-bw.jpg')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          />
+          <div className="founder-tile-top">
+            <img
+              src="/images/about/founder-camera-bw.jpg"
+              alt="Cris Emiliano"
+              className="founder-tile-top-img"
+              loading="lazy"
+            />
+          </div>
           {/* Bottom tile with photo */}
-          <div
-            className="founder-tile-bottom"
-            style={{
-              flex: 1,
-              backgroundImage: "url('/images/about/founder-neon.jpg')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundColor: '#1C1917',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              padding: 'calc(12 * var(--u))',
-              textAlign: 'center',
-            }}
-          />
+          <div className="founder-tile-bottom">
+            <img
+              src="/images/about/founder-neon.jpg"
+              alt="Cris Emiliano with client"
+              className="founder-tile-bottom-img"
+              loading="lazy"
+            />
+          </div>
         </div>
 
         {/* Column B (x 221–402): Profile Portrait */}
-        <div
-          className="anim-founder-col founder-col-b"
-          style={{
-            height: '100%',
-            backgroundImage:
-              "url('/images/about/founder-portrait.jpg')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
+        <div className="anim-founder-col founder-col-b">
+          <img
+            src="/images/about/founder-portrait.jpg"
+            alt="Cris Emiliano official portrait"
+            className="founder-portrait-img"
+            loading="lazy"
+          />
+        </div>
 
         {/* Column C (x 435–800): Meet the Founder info */}
         <div
@@ -214,6 +195,51 @@ export default function FounderBlock() {
       </div>
 
       <style jsx>{`
+        .founder-col-a {
+          display: flex;
+          flex-direction: column;
+          gap: calc(7 * var(--u));
+          height: 100%;
+        }
+        .founder-tile-top {
+          height: calc(190 * var(--u));
+          width: 100%;
+          overflow: hidden;
+        }
+        .founder-tile-top-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
+        }
+        .founder-tile-bottom {
+          flex: 1;
+          width: 100%;
+          overflow: hidden;
+          min-height: 0;
+          background-color: #1C1917;
+        }
+        .founder-tile-bottom-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
+        }
+        .founder-col-b {
+          height: 100%;
+          width: 100%;
+          overflow: hidden;
+        }
+        .founder-portrait-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
+        }
+
         @media (max-width: 1023px) {
           .founder-block {
             height: auto !important;
@@ -224,22 +250,58 @@ export default function FounderBlock() {
             flex-direction: column !important;
             gap: 28px !important;
             padding: 0 20px !important;
+            height: auto !important;
           }
           .founder-col-a {
             height: auto !important;
+            display: flex !important;
+            flex-direction: column !important;
             gap: 16px !important;
+            width: 100% !important;
           }
           .founder-tile-top {
-            height: 280px !important;
+            width: 100% !important;
+            height: auto !important;
+            aspect-ratio: 4 / 3 !important;
+            flex: none !important;
+            overflow: hidden !important;
+          }
+          .founder-tile-top-img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            display: block !important;
           }
           .founder-tile-bottom {
-            height: 270px !important;
+            width: 100% !important;
+            height: auto !important;
+            aspect-ratio: 4 / 3 !important;
             flex: none !important;
-            background-size: cover !important;
-            background-position: center center !important;
+            overflow: hidden !important;
+            min-height: unset !important;
+            background-color: transparent !important;
+          }
+          .founder-tile-bottom-img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            display: block !important;
           }
           .founder-col-b {
-            height: 380px !important;
+            width: 100% !important;
+            height: auto !important;
+            aspect-ratio: 3 / 4 !important;
+            flex: none !important;
+            overflow: hidden !important;
+          }
+          .founder-portrait-img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center top !important;
+            display: block !important;
           }
           .founder-divider {
             display: none !important;

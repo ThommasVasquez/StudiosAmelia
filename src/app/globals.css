@@ -315,7 +315,75 @@ textarea:focus-visible {
   textarea.form-input {
     height: 100px !important;
   }
+
+  /* Founder section mobile photo layout */
+  .founder-block {
+    height: auto !important;
+    padding: 48px 0 !important;
+  }
+  .founder-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 28px !important;
+    padding: 0 20px !important;
+    height: auto !important;
+  }
+  .founder-col-a {
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+  .founder-tile-top {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4 / 3 !important;
+    flex: none !important;
+    overflow: hidden !important;
+  }
+  .founder-tile-top-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+  }
+  .founder-tile-bottom {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4 / 3 !important;
+    flex: none !important;
+    overflow: hidden !important;
+    min-height: unset !important;
+    background-color: transparent !important;
+  }
+  .founder-tile-bottom-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+  }
+  .founder-col-b {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    flex: none !important;
+    overflow: hidden !important;
+  }
+  .founder-portrait-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    display: block !important;
+  }
+  .founder-divider {
+    display: none !important;
+  }
 }
+
 
 /* EnergySoft Lightning Bolt Glitch Animation (Identical to energysoftmedia.com) */
 @keyframes es-glitch-shift {
