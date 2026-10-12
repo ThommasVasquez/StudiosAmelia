@@ -70,7 +70,7 @@ export default function ContactInfo() {
               }}
             >
               {item.type === 'phone' ? (
-                <a href={`tel:${item.value.replace(/[^0-9]/g, '')}`}>{item.value}</a>
+                <a href={`tel:+${item.value.replace(/[^0-9]/g, '')}`}>{item.value}</a>
               ) : item.type === 'email' ? (
                 <a href={`mailto:${item.value}`}>{item.value}</a>
               ) : (

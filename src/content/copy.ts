@@ -118,7 +118,7 @@ export const COPY = {
       items: [
         {
           label: "CALL OR TEXT",
-          value: "(904) 888-7348",
+          value: "+1 (904) 888-7348",
           note: "We typically respond within 1 business hour.",
           type: "phone",
         },
