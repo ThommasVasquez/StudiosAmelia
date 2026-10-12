@@ -68,6 +68,7 @@ export default function FounderBlock() {
         >
           {/* Top B/W camera photo */}
           <div
+            className="founder-tile-top"
             style={{
               height: 'calc(190 * var(--u))',
               backgroundImage:
@@ -76,8 +77,9 @@ export default function FounderBlock() {
               backgroundPosition: 'center',
             }}
           />
-          {/* Bottom dark tile with neon text */}
+          {/* Bottom tile with photo */}
           <div
+            className="founder-tile-bottom"
             style={{
               flex: 1,
               backgroundImage: "url('/images/about/founder-neon.jpg')",
@@ -90,8 +92,7 @@ export default function FounderBlock() {
               padding: 'calc(12 * var(--u))',
               textAlign: 'center',
             }}
-          >
-          </div>
+          />
         </div>
 
         {/* Column B (x 221–402): Profile Portrait */}
@@ -221,14 +222,24 @@ export default function FounderBlock() {
           .founder-container {
             display: flex !important;
             flex-direction: column !important;
-            gap: 32px !important;
+            gap: 28px !important;
             padding: 0 20px !important;
           }
           .founder-col-a {
-            height: 320px !important;
+            height: auto !important;
+            gap: 16px !important;
+          }
+          .founder-tile-top {
+            height: 280px !important;
+          }
+          .founder-tile-bottom {
+            height: 270px !important;
+            flex: none !important;
+            background-size: cover !important;
+            background-position: center center !important;
           }
           .founder-col-b {
-            height: 320px !important;
+            height: 380px !important;
           }
           .founder-divider {
             display: none !important;
