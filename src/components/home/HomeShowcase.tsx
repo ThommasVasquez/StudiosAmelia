@@ -31,7 +31,8 @@ const STUDIO_CARDS = [
     href: '/beauty/',
     btnText: 'EXPLORE BEAUTY SERVICES →',
     desc: 'Lashes, brows, hair and makeup by beauty specialists.',
-    image: '/images/beauty/panel-lashes.jpg',
+    image: '/images/beauty/beauty-showcase.jpg',
+    bgPosition: 'center 30%',
   },
   {
     num: '04',
@@ -41,6 +42,7 @@ const STUDIO_CARDS = [
     btnText: 'VIEW CLASSES →',
     desc: 'Beauty education, makeup workshops and hands-on creative experiences.',
     image: '/images/classes/card-workshops.jpg',
+    bgPosition: 'center',
   },
 ];
 
@@ -123,7 +125,7 @@ export default function HomeShowcase() {
                   inset: 0,
                   backgroundImage: `url(${card.image})`,
                   backgroundSize: 'cover',
-                  backgroundPosition: 'center',
+                  backgroundPosition: card.bgPosition || 'center',
                   transition: 'transform 400ms ease',
                 }}
               />
