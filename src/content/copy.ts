@@ -45,6 +45,20 @@ export const COPY = {
       quoteAuthor: "— CRIS EMILIANO",
     },
 
+    sheyla: {
+      eyebrow: "MEET OUR CREATIVE TEAM",
+      name: "Sheyla Vernice",
+      subtitle: "PHOTOGRAPHER · CONTENT CREATOR · CREATIVE STRATEGIST",
+      paragraphs: [
+        "I’m Sheyla Vernice, a photographer, content creator, and creative strategist passionate about turning real moments into meaningful visual stories.",
+        "I specialize in lifestyle, personal branding, and creative content, combining photography with storytelling to create images that feel authentic, intentional, and true to each client.",
+        "My goal is to help people and brands show up confidently and beautifully through visuals that feel like them.",
+      ],
+      quote:
+        "My goal is to help people and brands show up confidently and beautifully through visuals that feel like them.",
+      quoteAuthor: "— SHEYLA VERNICE",
+    },
+
     stats: [
       { value: "15+", label: "YEARS OF EXPERIENCE" },
       { value: "300+", label: "STUDENTS TRAINED" },

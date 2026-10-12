@@ -185,9 +185,9 @@ export default function PhotographyHero() {
                 fontWeight: 600,
               }}
             >
-              <div>CRIS EMILIANO</div>
+              <div>CRIS EMILIANO & SHEYLA VERNICE</div>
               <div style={{ color: 'var(--muted)', fontWeight: 400 }}>
-                LEAD PHOTOGRAPHER & CREATIVE DIRECTOR
+                STUDIO PHOTOGRAPHY & CREATIVE STRATEGY
               </div>
             </div>
             <div
