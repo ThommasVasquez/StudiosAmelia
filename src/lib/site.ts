@@ -2,7 +2,7 @@ export const SITE = {
   name: "Studios at Amelia",
   address1: "1939 South 8th Street, Unit 6",
   city: "Fernandina Beach, FL 32034",
-  phone: "(904) 555-1234", // TODO(cliente): confirmar
+  phone: "(904) 888-7348",
   email: "hello@studiosatamelia.com",
   hours: [
     { days: "Tuesday – Saturday", time: "10:00 AM – 6:00 PM" },
